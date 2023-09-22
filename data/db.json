@@ -2,7 +2,7 @@
   "todos": [
     {
       "id": 2,
-      "task": "Memberi makan kucing 12",
+      "task": "Memberi makan kucing 121",
       "complete": true
     },
     {
@@ -46,9 +46,19 @@
       "complete": false
     },
     {
-      "task": "Lari pagi",
+      "task": "Lari pagi 30 mnt",
       "complete": true,
       "id": 11
+    },
+    {
+      "task": "Makan Rawon",
+      "complete": true,
+      "id": 13
+    },
+    {
+      "task": "Makan rujak",
+      "complete": false,
+      "id": 14
     }
   ]
 }

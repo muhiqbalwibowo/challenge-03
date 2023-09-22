@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { BiEdit } from "react-icons/bi";
+import { TiDelete } from "react-icons/ti";
 
 const TodoItem = ({ todo, setRefresh }) => {
   const [isEditFormOpen, setIsEditFormOpen] = useState(false);
@@ -61,15 +63,14 @@ const TodoItem = ({ todo, setRefresh }) => {
       {isEditFormOpen ? (
         <div className="edit-form">
           <input
-            type="text"
             value={editedTask}
             onChange={(e) => setEditedTask(e.target.value)}
           />
           <button style={{ marginLeft: 10 }} onClick={saveEditedTodo}>
-            Save
+            Simpan
           </button>
           <button style={{ marginLeft: 10 }} onClick={cancelEdit}>
-            Cancel
+            Batal
           </button>
         </div>
       ) : (
@@ -78,10 +79,10 @@ const TodoItem = ({ todo, setRefresh }) => {
             {todo.task}
           </div>
           <span className="edit" onClick={openEditForm}>
-            e
+            <BiEdit size={21} />
           </span>
           <span className="close" onClick={deleteTodo}>
-            x
+            <TiDelete size={21} color="red" />
           </span>
         </>
       )}

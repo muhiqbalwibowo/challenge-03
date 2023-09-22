@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
+import { Link } from "react-router-dom";
 
 const TodoList = ({ isRefresh, setRefresh }) => {
   const [todos, setTodos] = useState([]);
@@ -70,7 +71,7 @@ const TodoList = ({ isRefresh, setRefresh }) => {
     <div>
       <div className="header">
         <input
-          type="text"
+          //   type="text"
           placeholder="Search task..."
           value={searchKeyword}
           onChange={(e) => setSearchKeyword(e.target.value)}
@@ -85,7 +86,7 @@ const TodoList = ({ isRefresh, setRefresh }) => {
           </span>
         )}
       </div>
-      <div className="container">
+      <div className="container" style={{ gap: 20 }}>
         <button className="add-fillter" onClick={() => changeFilter("All")}>
           All
         </button>
@@ -95,6 +96,9 @@ const TodoList = ({ isRefresh, setRefresh }) => {
         <button className="add-fillter" onClick={() => changeFilter("Todo")}>
           Todo
         </button>
+        <Link to="/add" className="add-fillter">
+          <button className="add-fillter">Add Todo</button>
+        </Link>
       </div>
       <ul id="todo-list">
         {filterTodos(todos, filter).map((todo) => (

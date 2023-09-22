@@ -79,21 +79,20 @@ ul li.checked::before {
 }
 
 .close:hover {
-  background-color: #e74c3c;
+  background-color: #ffffff;
   color: white;
 }
 
 /* Style the header */
 .header {
-  background-color: #34495e;
+  background-color: #165fa8;
   padding: 30px 40px;
   color: white;
   text-align: center;
 }
 
 .container {
-  margin-top: 0;
-  background-color: #34495e;
+  background-color: #165fa8;
   padding: 0px 0px 20px 0px;
   color: white;
   text-align: center;
@@ -118,6 +117,15 @@ input {
   float: left;
   font-size: 16px;
 }
+input[type="text"] {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
 
 /* Style the "Add" button */
 .add-button {
@@ -133,7 +141,7 @@ input {
   border-radius: 0;
 }
 
-.add-fillter {
+.back-button {
   padding: 10px;
   width: 25%;
   background: #d9d9d9;
@@ -144,7 +152,20 @@ input {
   cursor: pointer;
   transition: 0.3s;
   border-radius: 0;
-  margin-right: 20px;
+  border: none;
+  float: right;
+  margin-left: 10px;
+}
+
+.add-fillter {
+  width: 100%;
+  background: #d9d9d9;
+  color: #555;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
 }
 
 .add-button:hover {
